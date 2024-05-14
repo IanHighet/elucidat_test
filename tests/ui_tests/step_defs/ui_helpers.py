@@ -1,0 +1,23 @@
+import time
+from selenium.webdriver.common.by import By
+
+class UI_helpers:
+
+    @staticmethod
+    def goto_start_url(browser, user_options):
+        browser.get(user_options["URL"])
+        time.sleep(5)
+        # try:
+        #     WebDriverWait(browser, 10).until(
+        #         EC.presence_of_element_located((By.CLASS_NAME, "image"))
+        #     )
+        # except:
+        #     pass
+
+
+    @staticmethod
+    def select_button_text(browser, text):
+        elements = browser.find_elements(By.CLASS_NAME, "button__text")
+        filtered_elements = [ elem for elem in elements if elem.get_attribute("textContent") == text.upper() ]
+        assert len(filtered_elements) == 1
+        filtered_elements[0].click()
