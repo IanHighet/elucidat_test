@@ -26,3 +26,9 @@ I created BDD for the further pages:
 ### UI Tests
 I have to admit that I had some trouble with the API tests.  I looked for an api specification on the endpoint, but I couldn't find one.
 I think I would have added tests to record test the state changes made during the progress through the app and at the various decision points.
+
+### BUGS
+1. When you vote on Kevin is Guilty from the Radio buttons, the pop-up indicates that you selected "Not Guilty" Likewise, when
+   you vote "Not Guilty", the pop-up indicates that you selected "Guilty".
+2. On the "YOU DECIDE" page the "CONTINUE >" button is displayed as if it is disabled.
+3. Fingerprint images are displayed for all reliability votes, such as fingerprints, DNA, Hair Sample, Footprint.
