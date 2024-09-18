@@ -2,7 +2,7 @@
 import time
 from selenium.webdriver.common.by import By
 
-class Ui_helpers:
+class UiHelpers:
     """Ui Helpers Class"""
 
     @staticmethod

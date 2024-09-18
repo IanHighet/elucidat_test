@@ -4,7 +4,7 @@ from pytest_bdd import scenarios, given, when, then, parsers
 from selenium.webdriver.common.by import By
 # from selenium.webdriver.support.wait import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
-from ui_helpers import Ui_helpers
+from ui_helpers import UiHelpers
 
 
 scenarios('../features/finding_the_truth.feature')
@@ -13,7 +13,7 @@ scenarios('../features/finding_the_truth.feature')
 @given('the Finding the Truth page')
 def step_impl(browser, user_options):
     """Go to Finding the Truth URL"""
-    Ui_helpers.goto_start_url(browser, user_options)
+    UiHelpers.goto_start_url(browser, user_options)
 
 
 @then(parsers.parse('I expect the header to be "{title}"'))
@@ -37,7 +37,7 @@ def step_impl(browser, button_name):
 @when(parsers.parse('I click the "{button_name}" button'))
 def step_impl(browser, button_name):
     """Click button"""
-    Ui_helpers.select_button_text(browser, button_name)
+    UiHelpers.select_button_text(browser, button_name)
 
 
 @then(parsers.parse('I expect to be taken to the "{expected_page}" page'))

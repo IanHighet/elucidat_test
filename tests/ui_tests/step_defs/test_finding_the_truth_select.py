@@ -2,7 +2,7 @@
 import time
 from pytest_bdd import scenarios, given, when, then, parsers
 from selenium.webdriver.common.by import By
-from ui_helpers import Ui_helpers
+from ui_helpers import UiHelpers
 
 TITLE_LOCATOR = "h2 > strong"
 CARD_CLASS = "card__image"
@@ -14,8 +14,8 @@ scenarios('../features/finding_the_truth_select.feature')
 @given('the Finding the Truth Selection page')
 def step_impl(browser, user_options):
     """Go to Finding the Truth Selection page"""
-    Ui_helpers.goto_start_url(browser, user_options)
-    Ui_helpers.select_button_text(browser, "Start")
+    UiHelpers.goto_start_url(browser, user_options)
+    UiHelpers.select_button_text(browser, "Start")
 
 
 @then(parsers.parse('I expect the header to be "{title}"'))
