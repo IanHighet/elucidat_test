@@ -14,8 +14,8 @@ scenarios('../features/finding_the_truth_select.feature')
 @given('the Finding the Truth Selection page')
 def step_impl(browser, user_options):
     """Go to Finding the Truth Selection page"""
-    UI_helpers.goto_start_url(browser, user_options)
-    UI_helpers.select_button_text(browser, "Start")
+    Ui_helpers.goto_start_url(browser, user_options)
+    Ui_helpers.select_button_text(browser, "Start")
 
 
 @then(parsers.parse('I expect the header to be "{title}"'))

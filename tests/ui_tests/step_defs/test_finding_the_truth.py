@@ -13,7 +13,7 @@ scenarios('../features/finding_the_truth.feature')
 @given('the Finding the Truth page')
 def step_impl(browser, user_options):
     """Go to Finding the Truth URL"""
-    UI_helpers.goto_start_url(browser, user_options)
+    Ui_helpers.goto_start_url(browser, user_options)
 
 
 @then(parsers.parse('I expect the header to be "{title}"'))
@@ -37,7 +37,7 @@ def step_impl(browser, button_name):
 @when(parsers.parse('I click the "{button_name}" button'))
 def step_impl(browser, button_name):
     """Click button"""
-    UI_helpers.select_button_text(browser, button_name)
+    Ui_helpers.select_button_text(browser, button_name)
 
 
 @then(parsers.parse('I expect to be taken to the "{expected_page}" page'))
